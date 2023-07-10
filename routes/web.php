@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//pages route
+Route::get('/about',[AboutController::class,'about'])->name('about.page');
+Route::get('/contact',[ContactController::class,'contact'])->name('contact.page');
