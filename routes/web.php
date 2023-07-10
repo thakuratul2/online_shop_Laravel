@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +23,5 @@ Route::get('/', function () {
 //pages route
 Route::get('/about',[AboutController::class,'about'])->name('about.page');
 Route::get('/contact',[ContactController::class,'contact'])->name('contact.page');
+Route::get('/cart',[CartController::class,'cart'])->name('cart.page');
+Route::get('/product',[ProductController::class,'product'])->name('product.page');
