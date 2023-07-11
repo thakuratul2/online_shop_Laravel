@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Frontend\AboutController;
@@ -34,3 +35,8 @@ Route::get('/order',[OrderController::class,'order'])->name('order.page');
 //auth
 Route::get('/login',[LoginController::class,'login'])->name('login.page');
 Route::get('/register',[RegisterController::class,'register'])->name('register.page');
+
+
+
+//admin
+Route::get('/admin-panel',[DashboardController::class,'index'])->name('dash.page');
